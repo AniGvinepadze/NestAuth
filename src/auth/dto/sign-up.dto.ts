@@ -21,5 +21,5 @@ export class SignUpDto {
   @IsNotEmpty()
   @IsString()
   @Length(6, 20)
-  confrimPassword: string;
+  confirmPassword: string;
 }

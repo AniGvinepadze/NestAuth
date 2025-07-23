@@ -27,12 +27,6 @@ export class User {
     select: false,
   })
   password: string;
-
-  @Prop({
-    type: String,
-    select: false,
-  })
-  confirmPassword: string;
 }
 
 export const userSchema = SchemaFactory.createForClass(User);
