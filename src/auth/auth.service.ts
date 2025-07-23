@@ -52,7 +52,7 @@ export class AuthService {
     if (!existUser)
       throw new NotFoundException('email or password is incorrect');
 
-    const isPassEqual = await bcrypt.comapre(password, existUser.password);
+    const isPassEqual = await bcrypt.compare(password, existUser.password);
     if (!isPassEqual)
       throw new NotFoundException('email or password is incorrect');
 
@@ -65,9 +65,9 @@ export class AuthService {
     return { message: 'user logged in successfully', token };
   }
 
- async getCurrentUser(userId: string) {
-    const user = await this.userModel.findById(userId)
-    if(!user) throw new NotFoundException("user not found")
-        return user
+  async getCurrentUser(userId: string) {
+    const user = await this.userModel.findById(userId);
+    if (!user) throw new NotFoundException('user not found');
+    return user;
   }
 }
