@@ -14,7 +14,7 @@ export class UserController {
 
   @Get()
   findAll() {
-    console.log("fst")
+    console.log("fwqwmst")
     return this.userService.findAll();
   }
 
